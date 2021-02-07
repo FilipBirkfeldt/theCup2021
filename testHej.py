@@ -1,1 +1,1 @@
-print('TheCup2021')
+print('\nTheCup - 2021\n')
