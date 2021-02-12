@@ -24,11 +24,6 @@ print('\n')
 print('---------------------------------------------START AV SCRIPTET------------------------------------------------------------------')
 print('\n')
 
-email = 'filip.birkfeldt@gmail.com'
-password = ''
-glassdoor = 'https://www.glassdoor.com/Job/sweden-data-science-jobs-SRCH_IL.0,6_IN223_KO7,19.htm'
-linkedin = 'https://www.linkedin.com/jobs/search/?keywords=data%20scientist'
-number_pages = 3
 
 # Skapar driver-objekt samt beautiful.Soup - objekt 
 driver=webdriver.Chrome('/Applications/chromedriver')
