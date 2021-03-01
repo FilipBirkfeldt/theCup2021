@@ -2,4 +2,4 @@
 our_portfolio
 
 # my portfolio kind of 
-this is it is it 
+this is it, is it? ;-) 
