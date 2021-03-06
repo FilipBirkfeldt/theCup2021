@@ -13,12 +13,12 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import ElementClickInterceptedException
 import pandas as pd
 import numpy as np
-import requests, bs4
+import requests
 
 from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 import talkWithHemnet
 
 from selenium.webdriver.common.keys import Keys

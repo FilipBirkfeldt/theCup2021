@@ -11,23 +11,30 @@ from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
 import time
+from selenium.webdriver.common.keys import Keys
 
 
-def log_inShareville(driver, userName, passWord):
-    "Funktion som loggar in på sharewille"
-    time.sleep(2)
-    xpath = '//*[@id="search-results"]/li[2]/a'
-    driver.find_element_by_xpath(xpath)
-    print(driver.find_element_by_xpath(xpath).text)
-
-    print('Log-in done')
-
-def loopThroughList(driver): 
-    time.sleep(2)
+def loopThroughList(driver, data_list): 
+    time.sleep(1)
     element_list = driver.find_elements_by_class_name("sold-property-listing")
-    data_list = []
     for element in element_list:
         data_list.append(element.text)
 
     print('done')
+    return data_list
+
+
+def krafsa(driver): 
+    data_list = []
+    n = 0
+    while n <= 100:
+        try: 
+            data_list = loopThroughList(driver, data_list)
+            element_next = driver.find_element_by_class_name("next_page")
+            element_next.send_keys(Keys.RETURN)
+            n+=1
+        except: 
+            break
+        
+    driver.close()
     return data_list
